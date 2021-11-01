@@ -99,6 +99,16 @@ export default Vue.extend({
       fixed: false,
       items: [
         {
+          icon: 'mdi-post',
+          title: 'Posts',
+          to: '/posts'
+        },
+        {
+          icon: 'mdi-send',
+          title: 'Insert',
+          to: '/insert'
+        },
+        {
           icon: 'mdi-apps',
           title: 'Welcome',
           to: '/'
