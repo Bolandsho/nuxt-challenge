@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "91c7c961-7377-4159-af35-4d29288b7631",
+		"name": "Testvue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/post/256",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"post",
+						"256"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/posts",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savepost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/savepost",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"savepost"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
