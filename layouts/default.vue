@@ -100,13 +100,13 @@ export default Vue.extend({
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          title: 'All Posts',
+          to: '/Posts'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'New Posts',
+          to: '/NewPost'
         }
       ],
       miniVariant: false,
