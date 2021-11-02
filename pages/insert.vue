@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'insert',
   data: () => ({
@@ -55,29 +57,49 @@ export default {
     title: '',
     description: ''
   }),
+  computed: {
+    ...mapGetters({
+      post: 'insert/post'
+    })
+  },
   methods: {
     async send() {
       this.loading = true
-      const req = await this.$axios({
-        url: 'http://talfigh.ventosco.com/testvue/api/savepost',
-        method: 'post',
-        data: {
+      this.$store.dispatch('insert/Insert', [
+        {
           title: this.title,
           description: this.description
         }
-      })
-      if (req.status === 201){
+      ]).then(() => {
+        console.log(this.post)
+        this.loading = false
         this.showAlert = true
         this.message = 'successfully submitted'
-      }else {
-        this.showAlert = true
-        this.message = 'error'
-      }
-      this.loading = false
-      setTimeout(()=>{
-        this.showAlert = false
-        this.message = ''
-      },5000)
+        setTimeout(() => {
+          this.showAlert = false
+          this.message = ''
+        }, 5000)
+      })
+      // const req = await this.$axios({
+      //   url: 'http://talfigh.ventosco.com/testvue/api/savepost',
+      //   method: 'post',
+      //   data: {
+      //     title: this.title,
+      //     description: this.description
+      //   }
+      // })
+      // if (req.status === 201){
+      //   this.showAlert = true
+      //   this.message = 'successfully submitted'
+      // }else {
+      //   this.showAlert = true
+      //   this.message = 'error'
+      // }
+      // this.loading = false
+      // setTimeout(()=>{
+      //   this.showAlert = false
+      //   this.message = ''
+      // },5000)
     }
   }
 }
