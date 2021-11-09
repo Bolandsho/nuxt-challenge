@@ -3,7 +3,6 @@
 *  از تایپ اسکریپت استفاده کنید
 * لطفا پیغام های لازمه را به کاربر نمایش دهید
 * فایل postman : api.json
-* در نهایت فایل ها در یک شاخه جدید به نام خودتان پوش کنید
 * آدرس سرور برای درخواست ها : http://talfigh.ventosco.com/testvue/api
 * لینک فیگما
 * https://www.figma.com/file/Jd4D21dH5L4kqrtYQyxfSK/talfigh-honar?node-id=103%3A119
