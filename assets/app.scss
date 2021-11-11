@@ -1,0 +1,45 @@
+@font-face {
+    font-family: dana;
+    src: url('@/assets/fonts/dana-regular.ttf'),
+        url('/fonts/dana/dana-regular.eot'),
+        url('@/assets/fonts/dana-regular.woff'),
+        url('/fonts/dana/dana-regular.woff2');
+}
+@font-face {
+    font-family: danaBold;
+    src: url('@/assets/fonts/dana-bold.ttf'), url('/fonts/dana/dana-bold.eot'),
+        url('@/assets/fonts/dana-bold.woff'), url('/fonts/dana/dana-bold.woff2');
+}
+
+* {
+    font-family: dana;
+}
+
+div {
+    font-size: 0.82rem;
+}
+
+.bold {
+    font-family: danaBold;
+    font-size: 1rem;
+}
+
+button {
+    letter-spacing: 0px !important;
+    font-size: 0.7rem !important;
+}
+
+.v-responsive__content {
+    display: flex !important;
+}
+.v-sheet {
+    width: 100% !important;
+}
+
+.v-carousel__controls__item {
+    margin: 0px;
+}
+
+.v-carousel__controls {
+    width: 33vw;
+}
