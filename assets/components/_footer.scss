@@ -1,0 +1,26 @@
+.footer {
+  background: linear-gradient(191.52deg, #6B6B6B -20.59%, #000000 80.56%);
+  position: relative;
+  padding-top: 130px !important;
+
+  li {
+    list-style: none !important;
+    margin-top: 10px;
+
+    a {
+      color: #c7c7c7 !important;
+
+      &:hover {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .footerBanner {
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, 0%);
+    background: linear-gradient(94.17deg, #2D9DCD -25.45%, #C0DBE6 152.67%);
+  }
+}
