@@ -1,0 +1,15 @@
+.mainNav {
+  .navLink {
+    color: #6D6D6D !important;
+    margin: 10px;
+    transition: $mainTransition;
+
+    &:hover {
+      color: #000 !important;
+    }
+
+    &.active {
+      color: #2D9DCD !important;
+    }
+  }
+}

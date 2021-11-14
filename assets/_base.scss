@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'vazir';
+  src: url(./fonts/Vazir.ttf);
+}
+
+@font-face {
+  font-family: 'nas';
+  src: url(./fonts/IranNastaliq.ttf);
+}
+
+* {
+  text-decoration: none;
+  font-family: 'vazir';
+  outline: none !important;
+}
+
+.nastaligh {
+  font-family: 'nas';
+  font-size: 42px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.absRight {
+  position: absolute !important;
+  right: 0;
+  bottom: 0%;
+  width: 400px;
+}
+
+.v-expansion-panel {
+  &::after {
+    display: none !important;
+  }
+
+  &::before {
+    display: none !important;
+  }
+}
+
+.v-expansion-panel-header--active {
+  color: #F2994A !important;
+}
+
+.hooper {
+  height: fit-content !important;
+}
+
+.v-application {
+  background: radial-gradient(111.29% 158.6% at -23.54% 142.49%,
+      rgba(45, 157, 205, 0.2) 35.17%,
+      rgba(35, 189, 255, 0) 88.6%),
+    radial-gradient(255.68% 329.54% at -89.58% 35.02%,
+      rgba(255, 255, 255, 0) 51.05%, #F2994A 83.55%), #FFFFFF !important;
+}
+
+
+//variables
+$mainTransition:0.3s;
+
+
+
+//slider
+.pilotSlide {
+  background-color: transparent !important;
+  border: 1px solid #F5A06F !important;
+}
+
+.imageCarousel {
+  position: absolute !important;
+  right: 0 !important;
+  top: -50%;
+  transform: translateY(35%);
+  width: 50% !important;
+  border-radius: 500px !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
