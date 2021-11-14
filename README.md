@@ -3,7 +3,9 @@
 ![alt](./s.png)
 
 <p style="text-align:end;font-family:tahoma">:برای اجرا</p>
+
 ```BASH
 npm run dev
+
 ```
 
