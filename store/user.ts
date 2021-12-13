@@ -28,7 +28,7 @@ export const actions: ActionTree<UserState, any> = {
 
   async SetCredentials({ commit }, payload) {
     try {
-      const res = await this.$repositories.saveCredentials().sendUserCredential()
+      const res = await this.$repositories.saveCredentials().sendUserCredential(payload)
 
       if (res)
         commit('SET_CREDENTIALS', payload)
