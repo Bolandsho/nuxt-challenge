@@ -6,13 +6,15 @@
           {{ post.title }}
         </v-card-title>
         <v-card-text>
-          {{ post.body }}
+          {{ post.description }}
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color='primary'>
-            Read More
-          </v-btn>
+
+            <NuxtLink class="btn btn-success" :to="getHref(post.id)"  >
+              Read More
+            </NuxtLink>
+
         </v-card-actions>
       </v-card>
     </v-col>
@@ -31,6 +33,11 @@ export default Vue.extend({
     ...mapGetters({
       posts: 'posts/posts'
     })
-  }
+  },
+    methods:{
+        getHref(id){
+            return `post/${id}`;
+        }
+    }
 })
 </script>
