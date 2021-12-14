@@ -10,7 +10,6 @@ declare module 'vuex/types/index' {
 
 const repositoriesPlugin: Plugin = (context, inject) => {
   inject('repositories', new Repositories(context.$axios))
-    
 }
 
 export default repositoriesPlugin
