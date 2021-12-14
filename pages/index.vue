@@ -1,5 +1,10 @@
 <template>
   <v-row justify='center' align='center'>
+   <div style="float: right;width: 100%">
+     <NuxtLink class="btn btn-success" to="/create"  >
+       Create Post
+     </NuxtLink>
+   </div>
     <v-col cols='12' sm='8' md='6'>
       <v-card v-for='post in posts' :key='post.id' class='mt-2'>
         <v-card-title class='headline'>
