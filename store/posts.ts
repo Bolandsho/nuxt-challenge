@@ -1,8 +1,9 @@
 import { ActionTree, MutationTree, GetterTree } from 'vuex'
 import { Post } from '~/data/models/post'
 
+
 export const state = () => ({
-  postList: [] as Post[]
+  postList: {} as Post,
 })
 export type PostsState = ReturnType<typeof state>
 
@@ -13,14 +14,18 @@ export const getters: GetterTree<PostsState, any> = {
 }
 
 export const mutations: MutationTree<PostsState> = {
-  SET_POSTS(state, posts) {
-    state.postList = posts
+
+  SET_POSTS(state, posts: Post) {
+
+    Object.assign(state.postList, posts)
+
   }
 }
 
 export const actions: ActionTree<PostsState, any> = {
-  async getPosts({ commit }) {
-    const postsRes = await this.$repositories.posts().getPosts()
+  async getPosts({ commit }, page: number) {
+    const postsRes = await this.$repositories.posts().getPosts(page)
     commit('SET_POSTS', postsRes)
-  }
+  },
+
 }
